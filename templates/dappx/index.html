@@ -1,0 +1,19 @@
+{% extends "dappx/base.html" %}
+{% block body_block %}
+<style>
+    .jumbotron {background-color: DarkGrey;
+                }
+</style>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to the BridgeLabz!!!</h1>
+    {% if user.is_authenticated %}
+        <h2>Hello {{ user.username }}, thanks for joining our Organisation.</h2>
+        <p>We are glad to have you in our crew. Now you are member of BridgeLabz.</p>
+        <h1>Congratulations!!!</h1>
+    {% else %}
+        <h2>Register or Login if you'd like to</h2>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
